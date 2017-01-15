@@ -4,6 +4,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { TeslaBatteryComponent } from './tesla-battery.component';
 import { TeslaCarComponent } from '../tesla-car/tesla-car.component';
+import { TeslaStatsComponent } from '../tesla-stats/tesla-stats.component';
+
 
 
 // services
@@ -16,7 +18,8 @@ import { TeslaBatteryService } from './tesla-battery.service';
   ],
   declarations: [
     TeslaBatteryComponent,
-    TeslaCarComponent
+    TeslaCarComponent,
+    TeslaStatsComponent
   ],
   providers: [
     TeslaBatteryService
