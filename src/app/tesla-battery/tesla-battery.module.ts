@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+
 import { TeslaBatteryComponent } from './tesla-battery.component';
+import { TeslaCarComponent } from '../tesla-car/tesla-car.component';
+
 
 // services
 import { TeslaBatteryService } from './tesla-battery.service';
@@ -12,7 +15,8 @@ import { TeslaBatteryService } from './tesla-battery.service';
     ReactiveFormsModule
   ],
   declarations: [
-    TeslaBatteryComponent
+    TeslaBatteryComponent,
+    TeslaCarComponent
   ],
   providers: [
     TeslaBatteryService
