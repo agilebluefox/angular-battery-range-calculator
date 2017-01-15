@@ -6,11 +6,15 @@ import { HttpModule } from '@angular/http';
 import { TeslaBatteryModule } from './tesla-battery/tesla-battery.module';
 
 import { AppComponent } from './app.component';
+import { TeslaStatsComponent } from './tesla-stats/tesla-stats.component';
+// import { TeslaCarComponent } from './tesla-car/tesla-car.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TeslaStatsComponent
+    // TeslaCarComponent
   ],
   imports: [
     BrowserModule,
