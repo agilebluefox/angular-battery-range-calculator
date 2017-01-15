@@ -12,11 +12,11 @@ import { TeslaBatteryService } from '../tesla-battery/tesla-battery.service';
 export class TeslaBatteryComponent implements OnInit {
 
   title: string = 'Range Per Charge';
-  models: any;
+  dataset: any;
   stats: Stat[];
   tesla: FormGroup;
 
-  private results: Array<String> = ['60', '60D', '75', '75D', '90D', 'P100D'];
+  private carModels: Array<String> = ['60', '60D', '75', '75D', '90D', 'P100D'];
 
   constructor(
     public fb: FormBuilder,
@@ -25,7 +25,7 @@ export class TeslaBatteryComponent implements OnInit {
 
   ngOnInit() {
 
-    this.models = this.teslaBatteryService.getModelData();
+    this.dataset = this.teslaBatteryService.getModelData();
 
     this.tesla = this.fb.group({
       config: this.fb.group({
@@ -36,14 +36,14 @@ export class TeslaBatteryComponent implements OnInit {
       })
     });
 
-    this.stats = this.calculateStats(this.results, this.tesla.controls['config'].value);
+    this.stats = this.calculateStats(this.carModels, this.tesla.controls['config'].value);
 
   }
 
-  private calculateStats(models, value): Stat[]  {
-  return models.map(model => {
+  private calculateStats(data, value): Stat[]  {
+  return data.map(model => {
     const { speed, temperature, climate, wheels } = value;
-    const miles = this.models[model][wheels][climate ? 'on' : 'off'].speed[speed][temperature];
+    const miles = this.dataset[model][wheels][climate ? 'on' : 'off'].speed[speed][temperature];
     return {
       model,
       miles
