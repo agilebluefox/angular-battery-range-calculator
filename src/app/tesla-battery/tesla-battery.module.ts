@@ -6,8 +6,6 @@ import { TeslaBatteryComponent } from './tesla-battery.component';
 import { TeslaCarComponent } from '../tesla-car/tesla-car.component';
 import { TeslaStatsComponent } from '../tesla-stats/tesla-stats.component';
 
-
-
 // services
 import { TeslaBatteryService } from './tesla-battery.service';
 
@@ -26,7 +24,8 @@ import { TeslaBatteryService } from './tesla-battery.service';
   ],
   exports: [
     // export so the root module can access
-    TeslaBatteryComponent
+    TeslaBatteryComponent,
+    TeslaStatsComponent
   ]
 })
 export class TeslaBatteryModule { }

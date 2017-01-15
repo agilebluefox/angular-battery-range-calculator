@@ -9,5 +9,5 @@ import { Stat } from '../models/stat.interface';
   styleUrls: ['./tesla-stats.component.scss']
 })
 export class TeslaStatsComponent {
-  @Input() stat: Stat[];
+  @Input() stats: Stat[];
 }

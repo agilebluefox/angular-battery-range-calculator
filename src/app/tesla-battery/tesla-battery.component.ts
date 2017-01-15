@@ -21,7 +21,7 @@ export class TeslaBatteryComponent implements OnInit {
   constructor(
     public fb: FormBuilder,
     private teslaBatteryService: TeslaBatteryService
-    ) { }
+  ) { }
 
   ngOnInit() {
 
@@ -40,15 +40,15 @@ export class TeslaBatteryComponent implements OnInit {
 
   }
 
-  private calculateStats(data, value): Stat[]  {
-  return data.map(model => {
-    const { speed, temperature, climate, wheels } = value;
-    const miles = this.dataset[model][wheels][climate ? 'on' : 'off'].speed[speed][temperature];
-    return {
-      model,
-      miles
-    };
-  });
-}
+  private calculateStats(data, value): Stat[] {
+    return data.map(model => {
+      const { speed, temperature, climate, wheels } = value;
+      const miles = this.dataset[model][wheels][climate ? 'on' : 'off'].speed[speed][temperature];
+      return {
+        model,
+        miles
+      };
+    });
+  }
 
 }
