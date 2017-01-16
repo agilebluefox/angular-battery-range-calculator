@@ -38,6 +38,10 @@ export class TeslaBatteryComponent implements OnInit {
 
     this.stats = this.calculateStats(this.carModels, this.tesla.controls['config'].value);
 
+    this.tesla.controls['config'].valueChanges.subscribe(data => {
+      this.stats = this.calculateStats(this.carModels, data);
+    });
+
   }
 
   private calculateStats(data, value): Stat[] {
