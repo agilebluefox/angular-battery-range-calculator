@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { TeslaBatteryComponent } from './tesla-battery.component';
-import { TeslaCarComponent } from '../tesla-car/tesla-car.component';
-import { TeslaStatsComponent } from '../tesla-stats/tesla-stats.component';
+import { TeslaCarComponent } from './tesla-car/tesla-car.component';
+import { TeslaStatsComponent } from './tesla-stats/tesla-stats.component';
 
 // services
 import { TeslaBatteryService } from './tesla-battery.service';
+import { TeslaCounterComponent } from './tesla-counter/tesla-counter.component';
+import { TeslaClimateComponent } from './tesla-climate/tesla-climate.component';
 
 @NgModule({
   imports: [
@@ -17,7 +19,9 @@ import { TeslaBatteryService } from './tesla-battery.service';
   declarations: [
     TeslaBatteryComponent,
     TeslaCarComponent,
-    TeslaStatsComponent
+    TeslaStatsComponent,
+    TeslaCounterComponent,
+    TeslaClimateComponent
   ],
   providers: [
     TeslaBatteryService

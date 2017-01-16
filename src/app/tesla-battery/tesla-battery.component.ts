@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
-import { Stat } from '../models/stat.interface';
+import { Stat } from './models/stat.interface';
 import { TeslaBatteryService } from '../tesla-battery/tesla-battery.service';
 
 @Component({
