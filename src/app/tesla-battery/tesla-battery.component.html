@@ -8,7 +8,10 @@
     <div class="tesla-climate cf">
       <app-tesla-counter [title]="'Outside Temperature'" [unit]="'°'" [step]="10" [min]="-10" [max]="40" formControlName="temperature">
       </app-tesla-counter>
+      <app-tesla-climate [limit]="tesla.get('config.temperature').value > 10" formControlName="climate">
+      </app-tesla-climate>
     </div>
+    <app-tesla-wheels formControlName="wheels"></app-tesla-wheels>
   </div>
   <div class="tesla-battery__notice">
     <p>
